@@ -60,5 +60,9 @@ clock_gettime: 1
 write: 1
 pipe2: 1
 
+# added for legacy
+madvise: 1
+gettid: 1
+
 # added after manual check
 setpriority: 1

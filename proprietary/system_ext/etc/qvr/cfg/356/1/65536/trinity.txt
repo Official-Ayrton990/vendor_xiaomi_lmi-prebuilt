@@ -13,12 +13,8 @@
 # from that path first before loading it from its default location.
 #calibration_path =
 
-# 6DoF Roomscale tracking
-# This setting specifies whether 6DoF uses roomscale tracking with mDSP offloading
-# 6dof_roomscale_enabled = false
-
 # 3D Reconstruction
-3dr_enabled = true
+3dr_enabled = false
 
 # Size of the samples stored in the 3D reconstruction in meters.
 #   Type: float
@@ -132,6 +128,80 @@ eye-tracking_camera_default_resolution_mode  = full
 eye-tracking_camera_supported_formats        = y8
 eye-tracking_camera_default_frame_format     = y8
 
+# RGB left camera properties
+rgb-left_camera_id                      = 3
+rgb-left_camera_sensor                  = ov8856
+rgb-left_camera_driver                  = native
+rgb-left_camera_res                     = 1280 720 30 30
+rgb-left_camera_quarter_res             = 320 240 30 30
+rgb-left_camera_frame_rdi_mode          = false
+rgb-left_camera_frame_rdi_bit_depth     = 10
+rgb-left_camera_rdi_frame_format        = raw10
+rgb-left_camera_auto_exposure           = true
+rgb-left_camera_hvx_mode                = false
+rgb-left_camera_hvx_algo                = qvrcam_receiver
+rgb-left_camera_master_only             = false
+rgb-left_camera_control_protected       = false
+rgb-left_camera_privileged_client       = 0
+# camera logging (disabled, continuous, oneshot)
+rgb-left_camera_frame_logging_mode      = disabled
+rgb-left_camera_hvx_sensor              = ov8856
+rgb-left_camera_default_flash_mode      = off
+rgb-left_camera_hvx_stereo_slave_camera_id = -1
+rgb-left_camera_default_resolution_mode    = full
+rgb-left_camera_supported_formats          = yuv420
+rgb-left_camera_default_frame_format       = yuv420
+
+# RGB right camera properties
+rgb-right_camera_id                      = 0
+rgb-right_camera_sensor                  = ov8856
+rgb-right_camera_driver                  = native
+rgb-right_camera_res                     = 1280 720 30 30
+rgb-right_camera_quarter_res             = 320 240 30 30
+rgb-right_camera_frame_rdi_mode          = false
+rgb-right_camera_frame_rdi_bit_depth     = 10
+rgb-right_camera_rdi_frame_format        = raw10
+rgb-right_camera_auto_exposure           = true
+rgb-right_camera_hvx_mode                = false
+rgb-right_camera_hvx_algo                = qvrcam_receiver
+rgb-right_camera_master_only             = false
+rgb-right_camera_control_protected       = false
+rgb-right_camera_privileged_client       = 0
+# camera logging (disabled, continuous, oneshot)
+rgb-right_camera_frame_logging_mode      = disabled
+rgb-right_camera_hvx_sensor              = ov8856
+rgb-right_camera_default_flash_mode      = off
+rgb-right_camera_hvx_stereo_slave_camera_id = -1
+rgb-right_camera_default_resolution_mode    = full
+rgb-right_camera_supported_formats          = yuv420
+rgb-right_camera_default_frame_format       = yuv420
+
+# RGB sync camera properties
+rgb_camera_id                      = 3,0
+rgb_camera_sensor                  = ov8856_stereo
+rgb_camera_driver                  = native_pair
+rgb_camera_calibration_name        = rgb-left,rgb-right
+rgb_camera_res                     = 2560 720 30 30
+rgb_camera_quarter_res             = 640 240 30 30
+rgb_camera_frame_rdi_mode          = false
+rgb_camera_frame_rdi_bit_depth     = 10
+rgb_camera_rdi_frame_format        = raw10
+rgb_camera_auto_exposure           = true
+rgb_camera_hvx_mode                = false
+rgb_camera_hvx_algo                = qvrcam_receiver
+rgb_camera_master_only             = false
+rgb_camera_control_protected       = false
+rgb_camera_privileged_client       = 0
+# camera logging (disabled, continuous, oneshot)
+rgb_camera_frame_logging_mode      = disabled
+rgb_camera_hvx_sensor              = ov8856
+rgb_camera_default_flash_mode      = off
+rgb_camera_hvx_stereo_slave_camera_id = -1
+rgb_camera_default_resolution_mode    = full
+rgb_camera_supported_formats          = yuv420
+rgb_camera_default_frame_format       = yuv420
+
+
 # 6dof pose logging (disabled, continuous, oneshot)
 tracking_6dof_pose_logging_mode    = disabled
 
@@ -175,6 +245,14 @@ performance_perf_hints = 0x0301:0x00001310 0x0302:0x00001311 0x0303:0x00001312
 # performance thermal rules to be enabled
 # format -> [thermal rule name]:[algo type]>[hardware type]
 performance_thermal_rules = QVR_Rule_G:monitor>gpu QVR_Rule_C:monitor>cpu
+
+# performance thermal interval in millisecond
+performance_thermal_interval_ms = 1000
+
+# performance thermal level in degrees celsius
+# format -> [thermal level name]:[temparature in celsius]
+performance_thermal_level_cpu = level1:40 level2:50 level3:60 level4:70
+performance_thermal_level_gpu = level1:30 level2:40 level3:50 level4:60
 
 # performance: temperature to temperature level mapping
 # format -> [hardware type]:[temperature]>[temperature level];[temperature]>[temperature level]

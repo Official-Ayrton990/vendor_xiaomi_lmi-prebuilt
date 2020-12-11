@@ -13,10 +13,6 @@
 # from that path first before loading it from its default location.
 #calibration_path =
 
-# 6DoF Roomscale tracking
-# This setting specifies whether 6DoF uses roomscale tracking with mDSP offloading
-# 6dof_roomscale_enabled = false
-
 # External Sensor related configurations
 #external_sensor_lib =
 
@@ -117,6 +113,14 @@ performance_perf_hints = 0x0301:0x00001310 0x0302:0x00001311 0x0303:0x00001312
 # performance thermal rules to be enabled
 # format -> [thermal rule name]:[algo type]>[hardware type]
 performance_thermal_rules = QVR_Rule_G:monitor>gpu QVR_Rule_C:monitor>cpu
+
+# performance thermal interval in millisecond
+performance_thermal_interval_ms = 1000
+
+# performance thermal level in degrees celsius
+# format -> [thermal level name]:[temparature in celsius]
+performance_thermal_level_cpu = level1:40 level2:50 level3:60 level4:70
+performance_thermal_level_gpu = level1:30 level2:40 level3:50 level4:60
 
 # performance: temperature to temperature level mapping
 # format -> [hardware type]:[temperature]>[temperature level];[temperature]>[temperature level]

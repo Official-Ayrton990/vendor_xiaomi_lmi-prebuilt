@@ -13,10 +13,6 @@
 # from that path first before loading it from its default location.
 #calibration_path =
 
-# 6DoF Roomscale tracking
-# This setting specifies whether 6DoF uses roomscale tracking with mDSP offloading
-# 6dof_roomscale_enabled = false
-
 # External Sensor related configurations
 #external_sensor_lib =
 
@@ -37,7 +33,7 @@
 #plugin_eye_tracking_operating_mode = default
 
 # Tracker library
-6dof_tracker_lib = libtracker_6dof_skel_8250.so
+6dof_tracker_lib = libtracker_6dof_skel_8350.so
 
 # Sensor orientation: default is: 1 2 3 (Android Portrait)
 # 1 represents x, 2 represents y and 3 represents z
@@ -55,7 +51,7 @@ tracking_camera_id                  = 0
 tracking_camera_sensor              = v4l_ov7251_stereo
 tracking_camera_driver              = v4l2
 tracking_camera_res                 = 1280 480
-tracking_camera_quarter_res         = 640 240
+tracking_camera_quarter_res         = 1280 480
 tracking_camera_frame_rdi_mode      = false
 tracking_camera_frame_rdi_bit_depth = 10
 tracking_camera_rdi_frame_format    = raw10
@@ -71,6 +67,8 @@ tracking_camera_hvx_sensor          = v4l_ov7251
 tracking_camera_default_flash_mode  = off
 tracking_camera_hvx_stereo_slave_camera_id = -1
 tracking_camera_default_resolution_mode  = full
+tracking_camera_supported_formats        = y8
+tracking_camera_default_frame_format     = y8
 
 # 6dof pose logging (disabled, continuous, oneshot)
 tracking_6dof_pose_logging_mode    = disabled
@@ -115,6 +113,14 @@ performance_perf_hints = 0x0301:0x00001310 0x0302:0x00001311 0x0303:0x00001312
 # performance thermal rules to be enabled
 # format -> [thermal rule name]:[algo type]>[hardware type]
 performance_thermal_rules = QVR_Rule_G:monitor>gpu QVR_Rule_C:monitor>cpu
+
+# performance thermal interval in millisecond
+performance_thermal_interval_ms = 1000
+
+# performance thermal level in degrees celsius
+# format -> [thermal level name]:[temparature in celsius]
+performance_thermal_level_cpu = level1:40 level2:50 level3:60 level4:70
+performance_thermal_level_gpu = level1:30 level2:40 level3:50 level4:60
 
 # performance: temperature to temperature level mapping
 # format -> [hardware type]:[temperature]>[temperature level];[temperature]>[temperature level]
