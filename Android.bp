@@ -141,6 +141,16 @@ android_app_import {
 }
 
 android_app_import {
+	name: "SoterService",
+	owner: "xiaomi",
+	apk: "proprietary/app/SoterService/SoterService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
 	name: "WAPPushManager",
 	owner: "xiaomi",
 	apk: "proprietary/system_ext/app/WAPPushManager/WAPPushManager.apk",

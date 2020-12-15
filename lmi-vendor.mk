@@ -675,6 +675,7 @@ PRODUCT_PACKAGES += \
     ims \
     qcrilmsgtunnel \
     seccamservice \
+    SoterService \
     WfdCommon \
     tcmclient \
     vendor.xiaomi.hardware.campostproc-V1.0-java \
