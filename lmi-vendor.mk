@@ -48,8 +48,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lmi/proprietary/lib64/vendor.xiaomi.hardware.vibratorfeature@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.xiaomi.hardware.vibratorfeature@1.0.so \
     vendor/xiaomi/lmi/proprietary/product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml \
     vendor/xiaomi/lmi/proprietary/product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml \
-    vendor/xiaomi/lmi/proprietary/product/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptXHD_encoder.so \
-    vendor/xiaomi/lmi/proprietary/product/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptX_encoder.so \
     vendor/xiaomi/lmi/proprietary/lib/libantradio.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libantradio.so \
     vendor/xiaomi/lmi/proprietary/lib64/libantradio.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libantradio.so \
     vendor/xiaomi/lmi/proprietary/system_ext/app/com.qualcomm.qti.services.systemhelper/lib/arm64/libsystemhelper_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/com.qualcomm.qti.services.systemhelper/lib/arm64/libsystemhelper_jni.so \
