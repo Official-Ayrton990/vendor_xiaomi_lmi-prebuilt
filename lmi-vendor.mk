@@ -48,8 +48,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lmi/proprietary/lib64/vendor.xiaomi.hardware.vibratorfeature@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.xiaomi.hardware.vibratorfeature@1.0.so \
     vendor/xiaomi/lmi/proprietary/product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml \
     vendor/xiaomi/lmi/proprietary/product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml \
-    vendor/xiaomi/lmi/proprietary/product/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptXHD_encoder.so \
-    vendor/xiaomi/lmi/proprietary/product/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptX_encoder.so \
     vendor/xiaomi/lmi/proprietary/lib/libantradio.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libantradio.so \
     vendor/xiaomi/lmi/proprietary/lib64/libantradio.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libantradio.so \
     vendor/xiaomi/lmi/proprietary/system_ext/app/com.qualcomm.qti.services.systemhelper/lib/arm64/libsystemhelper_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/com.qualcomm.qti.services.systemhelper/lib/arm64/libsystemhelper_jni.so \
@@ -380,6 +378,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lmi/proprietary/system_ext/lib64/lib-imsvt.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvt.so \
     vendor/xiaomi/lmi/proprietary/system_ext/lib64/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvtextutils.so \
     vendor/xiaomi/lmi/proprietary/system_ext/lib64/lib-imsvtutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvtutils.so \
+    vendor/xiaomi/lmi/proprietary/system_ext/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaptXHD_encoder.so \
+    vendor/xiaomi/lmi/proprietary/system_ext/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaptX_encoder.so \
     vendor/xiaomi/lmi/proprietary/system_ext/lib64/libDiagService.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libDiagService.so \
     vendor/xiaomi/lmi/proprietary/system_ext/lib64/libOpenCL_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libOpenCL_system.so \
     vendor/xiaomi/lmi/proprietary/system_ext/lib64/libQSEEComAPI_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libQSEEComAPI_system.so \
@@ -675,6 +675,7 @@ PRODUCT_PACKAGES += \
     ims \
     qcrilmsgtunnel \
     seccamservice \
+    SoterService \
     WfdCommon \
     tcmclient \
     vendor.xiaomi.hardware.campostproc-V1.0-java \
